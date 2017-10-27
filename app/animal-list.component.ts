@@ -5,14 +5,23 @@ import { Zoo } from './zoo.model';
 @Component({
   selector: 'animal-list',
   template: `
-  <h2>Animals:</h2>
-  <ul>
-    <li *ngFor="let eachAnimal of childAnimalList">
-      <h3>{{eachAnimal.name}} the {{eachAnimal.species}}</h3>
-      <button type="button" class="btn" (click)="editButtonHasBeenClicked(eachAnimal)" id="editAnimal">Details/Edit</button>
-    </li>
-  </ul>
-  `
+  <div class="body">
+    <div class="text">
+      <h2>Animals:</h2>
+      <ul>
+        <li *ngFor="let eachAnimal of childAnimalList">
+          <h3>{{eachAnimal.name}} the {{eachAnimal.species}}</h3>
+          <button type="button" class="btn" (click)="editButtonHasBeenClicked(eachAnimal)" id="editAnimal">Details/Edit</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  `,
+  styles: [`
+    .text {
+      float: left;
+    }
+  `]
 })
 
 export class AnimalListComponent {

@@ -34,9 +34,19 @@ import { Zoo } from './zoo.model';
       <label for="newDislikes">Dislikes:</label>
       <input type="text" #newDislikes name="newDislikes" class="form-control">
 
-      <button type="button" class="btn" (click)="addAnimal(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value); newSpecies.value = ''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';" id="addKeg">Add</button>
+      <button type="button" class="btn" (click)="addAnimal(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value); newSpecies.value = ''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';" id="addAnimal">Add</button>
   </form>
-  `
+  `,
+  styles: [`
+    h2 {
+      text-align: center;
+    }
+    .form-group {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+`]
 })
 
 export class AddAnimalComponent {

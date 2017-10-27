@@ -3,7 +3,13 @@ import { Zoo } from './zoo.model';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app/app.component.html'
+  templateUrl: 'app/app.component.html',
+  styles: [`
+    .navbar-buttons {
+      margin-top: 30px;
+      float: right;
+    }
+  `]
 })
 
 export class AppComponent {
@@ -57,6 +63,9 @@ export class AppComponent {
   }
 
   showAnimals() {
+    this.matureAnimalList = false;
+    this.youngAnimalList = false;
+    this.animalForm = false;
     if(this.displayAnimals) {
       this.displayAnimals = false;
     } else {
@@ -66,6 +75,8 @@ export class AppComponent {
 
   showAddForm() {
     this.displayAnimals = false;
+    this.matureAnimalList = false;
+    this.youngAnimalList = false;
     if(this.animalForm) {
       this.animalForm = false;
     } else {
@@ -81,6 +92,7 @@ export class AppComponent {
   showYoungAnimals() {
     this.animalForm = false;
     this.displayAnimals = false;
+    this.matureAnimalList = false;
     if(this.youngAnimalList) {
       this.youngAnimalList = false;
     } else {
