@@ -10,7 +10,7 @@ import { Zoo } from './zoo.model';
       <h2>Animals:</h2>
       <ul>
         <li *ngFor="let eachAnimal of childAnimalList">
-          <h3>{{eachAnimal.name}} the {{eachAnimal.species}}</h3>
+          <h4>{{eachAnimal.name}} the {{eachAnimal.species}}</h4>
           <button type="button" class="btn" (click)="editButtonHasBeenClicked(eachAnimal)" id="editAnimal">Details/Edit</button>
         </li>
       </ul>

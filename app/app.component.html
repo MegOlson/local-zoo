@@ -21,14 +21,18 @@
 <div *ngIf="youngAnimalList" >
   <h2>Animals under 2 Years Old:</h2>
   <div *ngFor="let eachAnimal of masterAnimalList | young">
-    <h3>{{eachAnimal.name}} the {{eachAnimal.species}}</h3>
+    <ul>
+      <li>{{eachAnimal.name}} the {{eachAnimal.species}}</li>
+    </ul>
   </div>
 </div>
 
 <div *ngIf="matureAnimalList" >
   <h2>Animals over 2 Years Old:</h2>
   <div *ngFor="let eachAnimal of masterAnimalList | mature">
-    <h3>{{eachAnimal.name}} the {{eachAnimal.species}}</h3>
+    <ul>
+      <li>{{eachAnimal.name}} the {{eachAnimal.species}}</li>
+    </ul>
   </div>
 </div>
 
