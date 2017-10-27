@@ -10,6 +10,8 @@ export class AppComponent {
   displayAnimals: boolean = false;
   animalForm: boolean = false;
   selectedAnimal = null;
+  youngAnimalList: boolean = false;
+  matureAnimalList: boolean = false;
   masterAnimalList: Zoo[] = [
     new Zoo(
       "Arctic Fox",
@@ -75,5 +77,27 @@ export class AppComponent {
     this.masterAnimalList.push(newAnimal);
     this.animalForm = false;
   }
+
+  showYoungAnimals() {
+    this.animalForm = false;
+    this.displayAnimals = false;
+    if(this.youngAnimalList) {
+      this.youngAnimalList = false;
+    } else {
+      this.youngAnimalList = true;
+    }
+  }
+
+  showMatureAnimals() {
+    this.animalForm = false;
+    this.displayAnimals = false;
+    this.youngAnimalList = false;
+    if(this.matureAnimalList) {
+      this.matureAnimalList = false;
+    } else {
+      this.matureAnimalList = true;
+    }
+  }
+
 
 }
