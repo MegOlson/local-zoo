@@ -1,3 +1,7 @@
 body {
-  background-image: url("../images/monkey.jpeg");
+  background-color: #568963;
+}
+
+.btn {
+  background-color: rgba(210, 180, 140, .7);
 }
