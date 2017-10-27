@@ -7,6 +7,7 @@ import { Zoo } from './zoo.model';
 })
 
 export class AppComponent {
+  displayAnimals: boolean = false;
   selectedAnimal = null;
   masterAnimalList: Zoo[] = [
     new Zoo(
@@ -43,4 +44,12 @@ export class AppComponent {
       "Loud Noises"
     )
   ]
+
+  showAnimals() {
+    if(this.displayAnimals) {
+      this.displayAnimals = false;
+    } else {
+      this.displayAnimals = true;
+    }
+  }
 }

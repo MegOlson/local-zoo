@@ -1,0 +1,31 @@
+<div class="page-header">
+  <div class="row">
+    <div class="col-md-6">
+      <h1 class="inline">Zoo Log</h1>
+    </div>
+    <div class="col-md-4 col-md-offset-2">
+      <nav class="navbar navbar-light bg-faded">
+        <form class="form-inline">
+          <div class="navbar-buttons">
+            <button class="btn btn-outline-success" (click)="showAnimals()" type="button">Animals</button>
+            <!-- <button class="btn btn-outline-success" (click)="showAddForm()" type="button">Add Animal</button>
+            <button class="btn btn-outline-success" (click)="showYoungAnimals()" type="button">Young Animals</button>
+            <button class="btn btn-outline-success" (click)="showMatureAnimals()" type="button">Mature Animals</button> -->
+          </div>
+        </form>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- <div *ngIf="animalForm" class="well newKeg">
+  <add-animal (clickSender)="addAnimalChild($event)"></add-animal>
+</div> -->
+<div *ngIf="displayAnimals" >
+  <div *ngIf="selectedAnimal === null">
+    <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
+  </div>
+</div>
+<!-- <div *ngIf="selectedAnimal" class="">
+  <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="doneEditing()"></edit-animal>
+</div> -->
