@@ -8,6 +8,7 @@ import { Zoo } from './zoo.model';
 
 export class AppComponent {
   displayAnimals: boolean = false;
+  animalForm: boolean = false;
   selectedAnimal = null;
   masterAnimalList: Zoo[] = [
     new Zoo(
@@ -52,4 +53,19 @@ export class AppComponent {
       this.displayAnimals = true;
     }
   }
+
+  showAddForm() {
+    this.displayAnimals = false;
+    if(this.animalForm) {
+      this.animalForm = false;
+    } else {
+      this.animalForm = true;
+    }
+  }
+
+  addAnimalChild(newAnimal: Zoo) {
+    this.masterAnimalList.push(newAnimal);
+    this.animalForm = false;
+  }
+
 }

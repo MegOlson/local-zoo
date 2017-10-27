@@ -8,8 +8,8 @@
         <form class="form-inline">
           <div class="navbar-buttons">
             <button class="btn btn-outline-success" (click)="showAnimals()" type="button">Animals</button>
-            <!-- <button class="btn btn-outline-success" (click)="showAddForm()" type="button">Add Animal</button>
-            <button class="btn btn-outline-success" (click)="showYoungAnimals()" type="button">Young Animals</button>
+            <button class="btn btn-outline-success" (click)="showAddForm()" type="button">Add Animal</button>
+            <!-- <button class="btn btn-outline-success" (click)="showYoungAnimals()" type="button">Young Animals</button>
             <button class="btn btn-outline-success" (click)="showMatureAnimals()" type="button">Mature Animals</button> -->
           </div>
         </form>
@@ -18,9 +18,9 @@
   </div>
 </div>
 
-<!-- <div *ngIf="animalForm" class="well newKeg">
+<div *ngIf="animalForm" class="newKeg">
   <add-animal (clickSender)="addAnimalChild($event)"></add-animal>
-</div> -->
+</div>
 <div *ngIf="displayAnimals" >
   <div *ngIf="selectedAnimal === null">
     <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
