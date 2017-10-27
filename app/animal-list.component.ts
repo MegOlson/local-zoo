@@ -9,6 +9,7 @@ import { Zoo } from './zoo.model';
   <ul>
     <li *ngFor="let eachAnimal of childAnimalList">
       <h3>{{eachAnimal.name}} the {{eachAnimal.species}}</h3>
+      <button type="button" class="btn" (click)="editButtonHasBeenClicked(eachAnimal)" id="editAnimal">Details/Edit</button>
     </li>
   </ul>
   `
@@ -18,8 +19,8 @@ export class AnimalListComponent {
   @Input() childAnimalList: Zoo;
   @Output() clickSender = new EventEmitter();
 
-  // editButtonHasBeenClicked(aniamlToEdit: Zoo) {
-  //   this.clickSender.emit(aniamlToEdit);
-  // }
+  editButtonHasBeenClicked(aniamlToEdit: Zoo) {
+    this.clickSender.emit(aniamlToEdit);
+  }
 
 }

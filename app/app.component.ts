@@ -46,6 +46,14 @@ export class AppComponent {
     )
   ]
 
+  editAnimal(clickedAnimal) {
+    this.selectedAnimal = clickedAnimal;
+  }
+
+  doneEditing() {
+    this.selectedAnimal = null;
+  }
+
   showAnimals() {
     if(this.displayAnimals) {
       this.displayAnimals = false;
